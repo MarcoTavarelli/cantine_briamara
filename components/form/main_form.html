@@ -1,0 +1,67 @@
+<!-- inizio form -->
+<form id="contact-form" method="post" action="contatti.php" role="form">
+
+    <div class="controls controls fade-in-up fadeInUpBig animated">
+
+        <div class="form-group">
+            <label class="control-label" for="contact-name">Nome</label>
+            <div>
+                <input class="form-control" type="text" id="contact-name" name="nome-cognome"
+                       placeholder="Nome e Cognome" required="required"
+                       data-error="Nome e Cognome sono richiesti">
+            </div>
+            <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label" for="form_email">Email</label>
+            <div>
+                <input id="form_email" type="email" name="email"
+                       placeholder="Inserisci la tua email *" required="required"
+                       data-error="E' richiesta una mail valida." class="form-control">
+            </div>
+            <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label" for="form_tel">Telefono</label>
+            <div>
+                <input id="form_tel" type="text" name="telefono"
+                       placeholder="Inserisci il numero di telefono" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label" for="form_object">Oggetto</label>
+            <div>
+                <input id="form_object" name="oggetto" class="form-control" type="text"
+                       placeholder="Oggetto *" required="required"
+                       data-error="Devi inserire un oggetto della mail">
+            </div>
+            <div class="help-block with-errors"></div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label" for="form_messaggio">Messaggio</label>
+            <div>
+                                    <textarea id="form_messaggio" name="messaggio" class="form-control"
+                                              placeholder="Il tuo messaggio *" rows="4" required
+                                              data-error="Lasciaci un messaggio *"></textarea>
+            </div>
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group">
+            <div class="text-right">
+                <input class="btn btn-outline-primary btn-lg box-shadow text-shadow" style="font-family: 'Helvetica', 'Arial' , san-serif;color:white;"  type="submit"
+                       value="Invia">
+            </div>
+        </div>
+    </div>
+    <div class="messages"></div>
+</form>
+<br><br>
+<!-- fine form -->
+<!-- form -->
+<script src="../components/form/validator.js"></script>
+<script src="../components/form/contatti.js"></script>

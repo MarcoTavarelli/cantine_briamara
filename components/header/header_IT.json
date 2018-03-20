@@ -1,0 +1,44 @@
+{
+  "menu": {
+    "home": {
+      "testo": "Home",
+      "uri": "index"
+    },
+    "cantine-briamara-cantina": {
+      "testo": "La Cantina",
+      "uri": "cantine-briamara-cantina"
+    },
+    "cantine-briamara-vini": {
+      "testo": "I Prodotti",
+      "uri": "cantine-briamara-vini"
+    },
+    "metodo": {
+      "testo": "Il Metodo",
+      "uri": "#",
+      "legni": {
+        "testo": "I Legni",
+        "uri": "cantine-briamara-legni"
+      },
+      "sugheri": {
+        "testo": "I Sugheri",
+        "uri": "cantine-briamara-sugheri"
+      },
+      "vetro": {
+        "testo": "Il Vetro",
+        "uri": "cantine-briamara-vetro"
+      }
+    },
+    "territorio": {
+      "testo": "Il Terrirorio",
+      "uri": "cantine-briamara-territorio"
+    },
+    "fontanile": {
+      "testo": "Il Fontanile",
+      "uri": "cantine-briamara-fontanile"
+    },
+    "contatti": {
+      "testo": "Contatti",
+      "uri": "cantine-briamara-contatti"
+    }
+  }
+}

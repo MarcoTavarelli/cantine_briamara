@@ -1,0 +1,97 @@
+<div class="loop owl-carousel owl-theme"><!-- carousel inner container -->
+
+    <!--  Biancamano -->
+    <article>
+        <a href="biancamano-erbaluce-di-caluso">
+            <img src="../images/components/productCarousel/biancamano.png" alt="Biancamano vino bianco" title="Biancamano vino bianco" class="img-fluid" >
+        </a>
+        </article>
+    <!--  Bric D'La Gesia -->
+    <article>
+        <a href="bric-d-la-gesia-erbaluce-di-caluso">
+            <img src="../images/components/productCarousel/bric.png" alt="Bric D'La Gesia vino bianco" title="Bric D'La Gesia vino bianco" class="img-fluid" >
+        </a>
+    </article>
+    <!--  Elisa -->
+    <article>
+        <a href="elisa-erbaluce-di-caluso">
+            <img src="../images/components/productCarousel/elisa.png" alt="Elisa vino bianco" title="Elisa vino bianco" class="img-fluid" >
+        </a>
+    </article>
+     <!--  Bere Nice -->
+     <article>
+            <a href="bere-nice-caluso-spumante">
+                <img src="../images/components/productCarousel/berenice.png" alt="Bere Nice vino spumante" title="Bere Nice spumante" class="img-fluid" >
+            </a>
+            </article>
+        <!--  Barbera -->
+        <article>
+            <a href="barbera-di-caluso">
+                <img src="../images/components/productCarousel/barbera.png" alt="Barbera di Caluso" title="Barbera di Caluso" class="img-fluid" >
+            </a>
+        </article>
+        <!--  Riserva -->
+        <article>
+            <a href="riserva-passito-di-caluso">
+                <img src="../images/components/productCarousel/riserva.png" alt="Riserva Passito di Caluso" title="Riserva Passito di Caluso" class="img-fluid" >
+            </a>
+        </article>
+         <!--  Pescarolo -->
+         <article>
+                <a href="pescarolo-passito-di-caluso">
+                    <img src="../images/components/productCarousel/pescarolo.png" alt="Pescarolo Passito di Caluso" title="Pescarolo Passito di Caluso" class="img-fluid" >
+                </a>
+            </article>
+            <!--  Cioccolatini -->
+            <article>
+                <a href="cioccolatini-al-passito">
+                    <img src="../images/components/productCarousel/cioccolatini.png" alt="Cioccolatini al passito di Caluso" title="Cioccolatini al passito di Caluso" class="img-fluid" >
+                </a>
+            </article>
+ 
+</div><!-- carousel inner container -->
+<script>
+    $(document).ready(function(){
+
+
+        /* carosello options */
+        $('#whiteWine_carousel').find('.loop').owlCarousel({
+            center: true,
+            dots:false,
+            items: 3,
+            autoplay:true,
+            loop: true,
+            margin: 10,
+            nav:true,
+            responsive: {
+                0:{
+                    items:1,
+                    nav:true
+                },
+                440:{
+                    items:1,
+                    nav:false
+                },
+                768:{
+                    items:2,
+                    nav:false
+                },
+                920:{
+                    items:3,
+                    nav:true,
+                    loop:true
+                }
+            }
+        });
+
+        /* carosello arrow */
+        $( ".owl-carousel" ).ready(function() {
+
+            $(".owl-prev").html("<b>&larr;</b>");
+            $(".owl-next").html("<b>&rarr;</b>");
+        });
+
+    });
+
+
+</script>

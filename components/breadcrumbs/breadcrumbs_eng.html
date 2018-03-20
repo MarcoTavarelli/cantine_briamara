@@ -1,0 +1,32 @@
+<div class="container">
+        <div class="row">
+            <div class="mr-auto my-auto">
+                <button style="cursor:pointer;background: none;border:none;" type="button" data-name="closeOverlay">
+                    <i class="fas fa-arrow-left"></i>
+                    </button>
+                <span class="my-auto">Back</span>
+            </div>
+            <div class="my-auto">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb ml-auto my-auto" style="background: none;">
+                        <li class="breadcrumb-item ml-auto"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">La Meridiana</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+<script>
+    ////////////////////// 
+    //2.2 - open view page
+    // scrivo il nome della pagina nel breadcrumbs
+    $("#pageView_breadcrumbs").ready(function() {
+        var BreadcrumbsName = $('#navigation_bar').attr("data-name");
+        var nav_h = $('#main_nav').outerHeight();
+        //alert(BreadcrumbsName);
+        $('#breadcrumbs_current').html(BreadcrumbsName);
+        $('#navigation_bar').css('margin-top' , nav_h );
+    });
+    //////////////////////
+</script>

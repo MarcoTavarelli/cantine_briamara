@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "home": {
+      "testo": "Home",
+      "uri": "index.html"
+    },
+    "babymoto": {
+      "testo": "Baby Moto",
+      "uri": "baby-moto"
+    },
+    "prodotto": {
+      "testo": "Products",
+      "uri": "products"
+    },
+    "ducatiBabyMoto": {
+      "testo": "Ducati Baby Moto",
+      "uri": "ducati-babymoto"
+    },
+    "News": {
+      "testo": "News",
+      "uri": "balance-bike-blog"
+    },
+    "Contatti": {
+      "testo": "Contacts",
+      "uri": "contacts"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "pagine": [
+    {
+      "rif": 1,
+      "pagina": "index",
+      "lingua": "IT"
+    },
+    {
+      "rif": 1,
+      "pagina": "index.html",
+      "lingua": "EN"
+    },
+    {
+      "rif": 2,
+      "pagina": "balance-bike",
+      "lingua": "IT"
+    },
+    {
+      "rif": 2,
+      "pagina": "baby-moto",
+      "lingua": "EN"
+    },
+    {
+      "rif": 3,
+      "pagina": "bici-in-legno",
+      "lingua": "IT"
+    },
+    {
+      "rif": 3,
+      "pagina": "products",
+      "lingua": "EN"
+    },
+    {
+      "rif": 4,
+      "pagina": "ducati-scrambler-babymoto",
+      "lingua": "IT"
+    },
+    {
+      "rif": 4,
+      "pagina": "ducati-babymoto",
+      "lingua": "EN"
+    },
+    {
+      "rif": 5,
+      "pagina": "balance-bike-blog.php",
+      "lingua": "IT"
+    },
+    {
+      "rif": 5,
+      "pagina": "balance-bike-blog",
+      "lingua": "EN"
+    },
+    {
+      "rif": 6,
+      "pagina": "babymoto-contatti",
+      "lingua": "IT"
+    },
+    {
+      "rif": 6,
+      "pagina": "contacts",
+      "lingua": "EN"
+    },
+    {
+      "rif": 7,
+      "pagina": "ducati-1299-superleggera",
+      "lingua": "IT"
+    },
+    {
+      "rif": 7,
+      "pagina": "ducati-1299-superleggera",
+      "lingua": "EN"
+    },
+    {
+      "rif": 8,
+      "pagina": "ducati-scrambler-babymoto",
+      "lingua": "IT"
+    },
+    {
+      "rif": 8,
+      "pagina": "ducati-scrambler-babymoto",
+      "lingua": "EN"
+    }
+  ]
+}

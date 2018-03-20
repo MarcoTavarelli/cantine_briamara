@@ -1,0 +1,768 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Laila:400,500,700');
+
+/*
+==============================================================================
+SOMMARIO - usa l'indice del sommario ( es: _1 ) per trovare velocemente la sezione :)
+==============================================================================
+
+*/
+/*
+    --------------------------------------------------------------------
+
+    _1 - custom
+    _2- pages
+    --------------------------------------------------------------------
+*/
+/*
+==============================================================================
+fine - SOMMARIO
+==============================================================================
+*/
+
+
+
+
+/*
+==============================================================================
+_1 -  custom css
+NB: in questa sezione ci sono i css customizzati appositamente per il sito in oggetto
+==============================================================================
+*/
+
+
+
+body {
+   font-family: 'Laila','Laila' , 'Helvetica' , Arial, san-serif;color:#898989;background-color: #f8f6ee;
+}
+
+
+h1,h2
+{font-family: 'Laila','Laila' , 'Helvetica' , Arial, san-serif;font-weight: bold;color:#40422a ;}
+h3,h4,h5,h6
+{font-family: 'Laila','Laila' , 'Helvetica' , Arial, san-serif;color:#40422a ;}
+p {font-size:1.1rem;line-height: 1.9rem;}
+@media screen and (max-width:768px){
+    h1{font-size:2rem;}
+    h2{font-size:1.8rem;}
+    h3, h4 {font-size:1.6rem;}
+    h5, h6 {font-size:1.3rem;}
+    p{font-size:1.2rem;}
+    ul, li ,a ,span ,i  ,input ,button {font-size:1rem;line-height: 1.6rem;}
+}
+.label, label {font-size:1.1rem;}
+
+section{background:none;}
+
+
+.box-shadow {
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+
+.py-1 {
+    padding-bottom: 1rem !important;
+    padding-top: 1rem !important;
+
+}
+
+.py-2 {
+    padding-bottom: 2rem !important;
+    padding-top: 2rem !important;
+
+}
+
+.py-3 {
+    padding-bottom: 3rem !important;
+    padding-top: 3rem !important;
+
+}
+
+.py-4 {
+    padding-bottom: 4rem !important;
+    padding-top: 4rem !important;
+
+}
+
+.py-5 {
+    padding-bottom: 5rem !important;
+    padding-top: 5rem !important;
+
+}
+
+.py-6 {
+    padding-bottom: 6rem !important;
+    padding-top: 6rem !important;
+
+}
+
+
+/* NAV BAR ------------------------------------------- */
+/* quando scrolla la nav bar */
+.brand_image_scroll{
+    -ms-transform: scale(0.70); /* IE 9 */
+    -webkit-transform: scale(0.70); /* Safari 3-8 */
+    transform: scale(0.70);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.navbar-nav .nav-link.active{   
+    color: #721b00!important;
+    cursor: default;
+    text-shadow: none!important;
+}
+/* --- dropdown navbar ---- */
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #721b00;
+}
+
+/* --- quando non vi è la nav bar fixed ---- */
+
+.navbar-expand-lg .navbar-nav .nav-link,
+.social_icon
+{
+    color:white;text-shadow:0 0 5px #333;
+}
+.firstSection_noFixedNav .navbar-expand-lg .navbar-nav .nav-link 
+{color:#333; text-shadow:none;}
+.firstSection_noFixedNav .social_icon
+{color:#333; text-shadow:none;}
+
+@media screen and (max-width:991px){
+    .navbar-expand-lg .navbar-nav .nav-link{color: #212529;text-shadow: none;}
+}
+.nav_scroll_down .navbar-nav .nav-link{
+    color:#212529;text-shadow:none;
+}
+.nav_scroll_down  .navbar-nav .social_icon{
+    color:#212529;text-shadow:none!important;
+}
+.nav_scroll_down{background-color: #fff;}
+
+.navbar-nav .active>.nav-link,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.navbar-nav .show>.nav-link
+{color:#721b00;}
+
+.icon-bar {
+    background-color: #fff;
+}
+
+.firstSection_noFixedNav .icon-bar,
+.nav_scroll_down .icon-bar {
+    background-color: #333;
+}
+
+@media (max-width: 1200px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+}
+
+@media screen and ( max-width:991px){
+    .navbar-collapse{background-color:white;}
+    .navbar-expand-lg .row{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .social_icon{color:#333!important;text-shadow:none!important;}
+
+}
+
+#navigation_bar{background-color: #eee;padding-bottom:0;}
+
+/* Carosello ------------------------------------------- */
+
+.owl-item{padding:1rem;}
+.owl-item:hover,
+.owl-item .active
+{padding:0;transition:.5s;}
+.owl-item:hover img
+{transition:.5s;box-shadow: 0 0 50px #ddd;}
+
+/* slide ------------------------------------------- */
+.carousel{
+    box-shadow:0 0 20px #ddd;
+}
+
+
+/* card ------------------------------------------- */
+.card{border:none;border-bottom: 1px solid #eeee;}
+/* badge ------------------------------------------- */
+.badge {
+    padding: .25em .4em .4em .4em;
+}
+.badge-primary{
+    background-color:#40422a;
+}
+.badge-primary:hover,
+.badge-primary[href]:focus,
+.badge-primary[href]:hover
+{background-color:#333;}
+
+/* btn ------------------------------------------- */
+
+/*
+primary
+*/
+.btn-primary {
+    background: #40422a;
+    color: #fff;
+    font-weight: bold;
+    border: solid 3px #40422a;
+    border-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition:1.5s;
+
+}
+
+
+.btn-outline-primary{
+    color: #40422a; border:solid 3px #40422a;border-radius:0px;color:#333;font-weight: bold;border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;transition:1.5s;
+}
+
+.btn-primary:hover,
+.btn-outline-primary:hover{
+    transition:1.3s;
+    color:#fff;
+    background-color: #b4bb6b;
+    border:solid 3px #b4bb6b ;
+    border-radius:0px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.btn-outline-primary:hover { border:solid 3px #b4bb6b ;color:#40422a;}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color:#999999;
+    background-color: #eee;
+    border-color: #eee;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #333;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(140, 141, 143, 0.233);
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(140, 141, 143, 0.233);
+}
+/*
+secondary
+*/
+.btn-secondary {
+    background: #721b00;
+    color: #fff;
+    font-weight: bold;
+    border: solid 3px #721b00;
+    border-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition:1.5s;
+}
+
+.btn-outline-secondary{
+   font-weight: bold;border:solid 3px #ccc;border-radius:0px;color:#ccc;
+}
+
+.btn-secondary:hover,
+.btn-outline-secondary:hover
+{
+    transition:1.3s;
+    color:#fff;
+    background-color: #F00000;
+    border:solid 3px #F00000 ;
+    border-radius:0px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.btn-outline-secondary:hover {border:solid 3px #ccc;}
+
+
+.btn-third,
+.btn-outline-third{
+    background-color:#613a12;
+    border:solid 3px #613a12 ;
+    transition:1.3s;
+    color:#fff;
+    border-radius:0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.btn-third:hover,
+.btn-outline-third:hover{
+    background-color:#ff9933;
+    border:solid 3px #ff9933 ;
+    transition:1.3s;
+    color:#fff;
+    border-radius:0px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.btn-forth,
+.btn-outline-third{
+    background-color:#7a420a;
+    border:solid 3px #7a420a ;
+    transition:1.3s;
+    color:#fff;
+    border-radius:0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.btn-forth:hover,
+.btn-outline-forth:hover{
+    background-color:#361e05;
+    border:solid 3px #361e05 ;
+    transition:1.3s;
+    color:#fff;
+    border-radius:0px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/*
+light
+ */
+
+ .btn-outline-light{
+    background:none;
+    color: #fff;
+    font-weight: bold;
+    border: solid 3px #fff;
+    border-radius: 0; 
+ }
+ .btn-outline-light:hover{color:#333;transition: 1s;text-shadow: none;}
+
+/* pagination ------------------------------------------- */
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+.page-link:hover {
+    color:#333;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #333;
+    border-color: #333;
+}
+
+/* form ------------------------------------------- */
+.form-control {
+    color: #495057;
+    background-color: #fff;
+    border-radius: 0;
+    border: solid 3px #ccc;
+    box-shadow: 10px 20px 40px #ddd;
+}
+/* sidebar ------------------------------------------- */
+.sidebar{z-index:2;}
+.sidebar-module {
+    box-shadow: 0px 0px 10px #ddd;
+    background-color: #FAFAFA;
+    padding:4%;
+    margin-bottom:2rem;
+}
+
+/* footer ------------------------------------------- */
+#main_footer{padding-top: 2rem;z-index: 2;background-color: #fff;}
+/* taglio diagonale del footer */
+.before_footer {
+
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    transform: skewY(-2.6deg);
+    transform-origin: 0;
+    box-shadow: 0 0px 50px rgba(0,0,0,0.3);
+    position: absolute;
+
+    /*
+    background-image: url(../images/banner/footer_banner.png);
+    background-size: cover;
+    background-position: center top;
+    height:100px;
+    width: 100%;
+    position: relative;
+    /*margin-top: -7rem;*/
+}
+
+/* Overlayer ------------------------------------------- */
+.overlay_section{background-color:#f8f6ee;;}
+#navigation_bar {
+    background-color: #b4bb6b;
+    padding-bottom: 0;
+}
+
+.productInfo_list{
+    list-style-type:none;line-height:2rem;
+}
+.productInfo_list em{
+    font-weight:500;
+}
+/*
+==============================================================================
+_5 -  pages background images css
+NB: in questa sezione ci sono i css dei background di ogni pagina
+==============================================================================
+*/
+
+/*
+=======================
+HOME */
+
+/*
+xl
+ */
+
+/* sezione 1 */
+#heroSlider_home .carousel-item:first-child {background-image: url("../images/home/1/xl/cantine-briamara_3840.jpg");}
+#heroSlider_home .carousel-item:nth-child(2) {background-image: url("../images/home/1/xl/cantine-briamara_3840.jpg");}
+#heroSlider_home .carousel-item:nth-child(3) {background-image: url("../images/home/1/xl/cantine-briamara_3840.jpg");}
+#heroSlider_home .carousel-item:nth-child(4) {background-image: url("../images/home/1/xl/cantine-briamara_3840.jpg");}
+
+@media screen and (max-width:2048px){
+    #heroSlider_home .carousel-item:first-child {background-image: url("../images/home/1/xl/cantine-briamara_2048.jpg");}
+    #heroSlider_home .carousel-item:nth-child(2) {background-image: url("../images/home/1/xl/cantine-briamara_2048.jpg");}
+    #heroSlider_home .carousel-item:nth-child(3) {background-image: url("../images/home/1/xl/cantine-briamara_2048.jpg");}
+    #heroSlider_home .carousel-item:nth-child(4) {background-image: url("../images/home/1/xl/cantine-briamara_2048.jpg");}
+}
+
+
+@media screen and (max-width:1920px){
+#heroSlider_home .carousel-item:first-child {background-image: url("../images/home/1/xl/cantine-briamara_1920.jpg");}
+    #heroSlider_home .carousel-item:nth-child(2) {background-image: url("../images/home/1/xl/cantine-briamara_1920.jpg");}
+    #heroSlider_home .carousel-item:nth-child(3) {background-image: url("../images/home/1/xl/cantine-briamara_1920.jpg");}
+    #heroSlider_home .carousel-item:nth-child(4) {background-image: url("../images/home/1/xl/cantine-briamara_1920.jpg");}
+}
+
+
+/*
+lg
+ */
+@media screen and (max-width:1200px){
+
+    /* sezione 1 */
+    #heroSlider_home .carousel-item:first-child {background-image: url("../images/home/1/lg/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(2) {background-image: url("../images/home/1/lg/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(3) {background-image: url("../images/home/1/lg/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(4) {background-image: url("../images/home/1/lg/cantine-briamara.jpg");}
+
+}
+/*
+md
+ */
+@media screen and (max-width:992px){
+
+    /* sezione 1 */
+    #heroSlider_home .carousel-item:first-child {background-image: url("../images/home/1/md/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(2) {background-image: url("../images/home/1/md/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(3) {background-image: url("../images/home/1/md/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(4) {background-image: url("../images/home/1/md/cantine-briamara.jpg");}
+
+
+}
+/*
+sm
+ */
+@media screen and (max-width:768px){
+
+    /* sezione 1 */
+    #heroSlider_home .carousel-item:first-child {background-image: url("../images/home/1/sm/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(2) {background-image: url("../images/home/1/sm/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(3) {background-image: url("../images/home/1/sm/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(4) {background-image: url("../images/home/1/sm/cantine-briamara.jpg");}
+    #home_1 img {display:none;}
+
+
+}
+/*
+xs
+ */
+@media screen and (max-width:576px){
+
+    /* sezione 1 */
+    #heroSlider_home .carousel-item:first-child {background-image: url("../images/home/1/xs/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(2) {background-image: url("../images/home/1/xs/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(3) {background-image: url("../images/home/1/xs/cantine-briamara.jpg");}
+    #heroSlider_home .carousel-item:nth-child(4) {background-image: url("../images/home/1/xs/cantine-briamara.jpg");}
+
+
+}
+
+.sc_line.sc_line_sep {
+    border-color: #dfddd6 !important;
+    margin: 45px 0;
+    position: relative;
+}
+
+.sc_line.sc_line_style_solid {
+    border-bottom: 1px solid #ddd;
+}
+
+.sc_line.sc_line_sep:before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    top: -45px;
+    margin: 0 0 0 -20px;
+    background: #f8f6ee url(../images/home/3/line.png) no-repeat center center;
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+}
+#home_4 .img_group{
+
+    opacity:0.6;
+    transition:1s;
+
+}
+#home_4 .img_group:hover{
+    cursor: pointer;
+    opacity:1.0;
+    transition:1s;
+
+
+}
+
+/*
+fine - HOME
+=======================
+ */
+
+/*
+=======================
+Chi siamo */
+
+ #chiSiamo_3 .container{
+    box-shadow: 0 0 20px #ccc;
+    background-color: #fff;
+    padding-bottom:4rem;
+    padding-top:6rem;
+ }
+
+ section#chiSiamo_1 figure.img_group {
+    box-shadow: 0 0 20px #999;transition:1s;
+}
+
+/*
+fine - Chi siamo
+=======================
+ */
+/*
+=======================
+Biogas */
+
+#biogas_2 .container{
+    box-shadow: 0 0 20px #ccc;
+    background-color: #fff;
+    padding-bottom:4rem;
+    padding-top:6rem;
+ }
+
+/*
+fine - Biogas
+=======================
+ */
+
+/*
+=======================
+LA Schiavenza */
+
+#bannerSection_schiavenza{
+    background-image: url("../images/la_schiavenza/2/lg/agrigelateria_torino_e_provincia.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+/*
+fine - Schiavenza
+=======================
+ */
+/*
+=======================
+LA Tchavana */
+
+#bannerSection_tchavana{
+    background-image: url("../images/la_tchavana/2/lg/formaggio_piemontese.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+/*
+fine - Tchavana
+=======================
+ */
+/*
+=======================
+LA Meridiana */
+
+#bannerSection_meridiana{
+background-image: url("../images/la_meridiana/2/lg/caseificio_valdostano.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+/*
+fine - Meridiana
+=======================
+ */
+/*
+=======================
+LA Meridiana */
+
+#bannerSection_cellaGrande{
+    background-image: url("../images/cellagrande/2/lg/agriturismo_viverone_e_dintorni.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+/*
+fine - Meridiana
+=======================
+ */
+
+/*
+BLOG
+=======================
+*/
+
+.article_card
+{
+    transition: transform 0.2s;
+    background:none!important;
+}
+
+.article_card .img_group
+{
+    overflow: hidden;
+    transition:1s;
+}
+.article_card .img_group img
+{
+    transition:1s;
+}
+.article_card:hover{
+    box-shadow:0 0 10px #999999;  
+    transition:1s;
+    z-index:2;
+}
+
+.article_card:hover .card-title a {
+    color:#721b00; 
+}
+
+.article_card:hover .img_group img
+
+{
+    transition:1s;
+    -ms-transform: scale(1.10); /* IE 9 */
+    -webkit-transform: scale(1.10); /* Safari 3-8 */
+    transform: scale(1.10);
+    z-index:2;
+    box-shadow:0 0 10px #999999;
+}
+
+article > .btn_group .btn {
+    margin: 0rem;
+}
+
+@media screen and ( max-width:768px){
+    #news_section a.btn.btn-primary {
+        /*border: solid;*/
+        min-width: 100%;
+    }
+}
+
+/*
+xl
+ */
+
+/* sezione 1 */
+#news_1 {background-image: url("../images/home/1/xl/azienda_agricola_3840.jpg");}
+
+@media screen and (max-width:2048px){
+    #news_1 {background-image: url("../images/home/1/xl/azienda_agricola_2048.jpg");}
+   }
+
+
+@media screen and (max-width:1920px){
+    #news_1 {background-image: url("../images/home/1/xl/azienda_agricola_1920.jpg");}
+}
+
+
+/*
+lg
+ */
+@media screen and (max-width:1200px){
+
+    /* sezione 1 */
+   
+    #news_1 {background-image: url("../images/home/1/lg/azienda_agricola.jpg");}
+
+}
+/*
+md
+ */
+@media screen and (max-width:992px){
+
+    /* sezione 1 */
+   
+    #news_1 {background-image: url("../images/home/1/md/azienda_agricola.jpg");}
+   }
+/*
+sm
+ */
+@media screen and (max-width:768px){
+
+    /* sezione 1 */
+    
+    #news_1 {background-image: url("../images/home/1/sm/azienda_agricola.jpg");}
+}
+/*
+xs
+ */
+@media screen and (max-width:576px){
+
+    /* sezione 1 */
+    #news_1 {background-image: url("../images/home/1/xs/azienda_agricola.jpg");}
+}
+
+
+/*
+fine - BLOG
+=======================
+*/
+
+
+/* Internet Explorer fix nav bar */
+@media screen\0 {
+    .img-fluid{width:100%;}
+    .nav_scroll_down .navbar-collapse,
+    .nav_scroll_down .navbar-brand
+    {margin-top:-20px;}
+
+}

@@ -1,0 +1,16 @@
+RewriteBase /cantine_briamara/
+RewriteEngine on
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule articolo/(.*) articolo.php?titolo=$1
+RewriteRule blog/categoria/(.*) blog.php?categoria=$1
+RewriteRule blog/tag/(.*) blog.php?tag=$1
+RewriteRule blog/pagina/(.*) blog.php?pagina=$1
+RewriteRule blog$ blog.php [L]
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule cantine_briamara/(.*)$ $1.html [L]
+
+ErrorDocument 404 /cantine_briamara/404.html
+ErrorDocument 403 /cantine_briamara/403.html

@@ -1,0 +1,94 @@
+<div class="loop owl-carousel owl-theme animated"><!-- carousel inner container -->
+
+    <!--  Kit Dondolo -->
+    <article class="card">
+        <div class="item text-center">
+            <a href="accessori-bike-balance-dondolo">
+                <img src="../images/prodotti/balance-bike-accessori/kit_dondolo/xxs/dondolo_bici_legno.jpg" alt="Kit Dondolo" title="Kit Dondolo" class="img-fluid" >
+                <div class="heading_group py-2">
+                    <h3 class="text-center">Kit Dondolo</h3>
+                </div>
+            </a>
+        </div>
+    </article>
+    <!--   Kit Pattini -->
+    <article class="card">
+        <div class="item text-center">
+            <a href="kit-neve-balance-bike">
+                <img src="../images/prodotti/balance-bike-accessori/kit_pattini/xxs/pattini_balanke_bike.jpg" alt="Kit Pattini" title="Kit Pattini" class="img-fluid" >
+                <div class="heading_group py-2">
+                    <h3 class="text-center">Kit Pattini</h3>
+                </div>
+            </a>
+        </div>
+    </article>
+    <!--  Kit Terza Ruota -->
+    <article class="card">
+        <div class="item text-center">
+            <a href="accessori-balance-bike">
+                <img src="../images/prodotti/balance-bike-accessori/kit_tre_ruote/xxs/bici_senza_pedale_ruota.jpg" alt="Kit Terza Ruota" title="Kit Terza Ruota" class="img-fluid" >
+                <div class="heading_group py-2">
+                    <h3 class="text-center">Kit Terza Ruota</h3>
+                </div>
+            </a>
+        </div>
+    </article>
+    <!--  Kit Terza Ruota Transformer -->
+    <article class="card">
+        <div class="item text-center">
+            <a href="accessori-balance-bike-transformer">
+                <img src="../images/prodotti/balance-bike-accessori/kit_tre_ruote_transformer/xxs/run_bike_ruote.jpg" alt="Kit Terza Ruota Transformer" title="Kit Terza Ruota Transformer" class="img-fluid" >
+                <div class="heading_group py-2">
+                    <h3 class="text-center">Kit Terza Ruota Transformer</h3>
+                </div>
+            </a>
+        </div>
+    </article>
+
+
+</div><!-- carousel inner container -->
+<script>
+    $(document).ready(function(){
+
+
+        /* carosello options */
+        $('#kitCarousel').find('.loop').owlCarousel({
+            center: true,
+            dots:false,
+            items: 4,
+            autoplay:true,
+            loop: true,
+            margin: 10,
+            nav:true,
+            responsive: {
+                0:{
+                    items:1,
+                    nav:true
+                },
+                440:{
+                    items:2,
+                    nav:false
+                },
+                768:{
+                    items:3,
+                    nav:false
+                },
+                920:{
+                    items:4,
+                    nav:true,
+                    loop:true
+                }
+            }
+        });
+
+        /* carosello arrow */
+        $( ".owl-carousel" ).ready(function() {
+
+            $(".owl-prev").html("<b>&larr;</b>");
+            $(".owl-next").html("<b>&rarr;</b>");
+        });
+
+    });
+
+
+</script>

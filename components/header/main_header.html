@@ -1,0 +1,197 @@
+
+<nav id="main_nav" style="z-index:2000;" class="navbar navbar-expand-lg fixed-top py-0 py-md-1 w-100">
+    <div class="container">
+        <div id="main_nav_container" class="row w-100">
+            <a class="navbar-brand text-center p-0" href="index" style="width:100%;">
+                <img id="" title="By Bagnod Logo" alt="By Bagnod Logo" class="text-center"
+                     width="180px;"
+                     src="../images/loghi/brand_logo_white.png">
+            </a>
+
+            <button id="mobile_toggle_btn" class="ml-auto my-auto mobile-hide-lg navbar-toggler  collapsed"
+                    type="button"
+                    data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+                    aria-expanded="false" aria-label="Toggle navigation" value="unClicked">
+                <span class="icon-bar bar1"></span>
+                <span class="icon-bar bar2 "></span>
+                <span class="icon-bar bar3 "></span>
+            </button>
+
+            <div class="collapse navbar-collapse collapsed" id="navbarTogglerDemo01">
+
+                <!-- nav link -->
+                <ul id="menu" class="navbar-nav mx-auto   mt-lg-0">
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- Il path è da considerarsi partendo dal file index.html all'interno di una cartella della lingua -->
+<!-- Cambio lingua e creazione menu -->
+<script src="../components/header/header_function.js"></script>
+
+<script>
+
+    // ------------------------------- Ready --------------------------------- //
+
+ 
+    $(document).ready(function () {
+
+            $('#main_nav').ready(function () {
+            if ($('#header').hasClass('firstSection_noFixedNav')) {
+                $(".navbar-brand").find("img").attr("src" , "../images/loghi/brand_logo.png");
+                $(".navbar-expand-lg").removeClass('fixed-top');
+            }
+            
+            $('#main_nav .nav-link').each(function(){
+                //var url = $(location).attr('href').lastIndexOf('/') + 1;
+                var href = document.location.href;
+                var lastPathSegment = href.substr(href.lastIndexOf('/') + 1);
+                var nav_link = $(this).attr('href');
+               // alert(lastPathSegment + ' / ' + nav_link );
+                if (lastPathSegment == nav_link + '.html' || lastPathSegment == nav_link + '.php' ){
+                    $(this).addClass('active');
+                    return false;
+                }
+            });
+        });
+
+        /*
+                var nav_h = $("#main_nav").innerHeight();
+                $('.empty_nav').css('height',nav_h );
+        */
+
+        /* full width menu
+        ------------------
+                var nav_list = '<ul id="menu" class="navbar-nav mx-auto   mt-lg-0">' +
+                    '</ul>' +
+                    '<div id="lang_container" class="my-auto">' +
+                    '<span data-lang="EN" class="lang_box">' +
+                    '<img src="../images/loghi/lang_icon/eng.png" width="60" alt="lingua Inglese" title="lingua Inglese">' +
+                    '</span>' +
+                    '<span data-lang="IT" class="lang_box">' +
+                    '<img src="../images/loghi/lang_icon/ita.png" width="60" alt="lingua Italiana" title="lingua Italiana">' +
+                    '</span>' +
+                    '</div>';
+
+
+               if ( $(window).width() > 992){
+                   //alert('ciao');
+                   $('#main_nav_container').append(nav_list);
+               } else{
+                   $('#navList').append(nav_list);
+               }
+        ----------------
+        */
+
+        // --------------------------------- toggle menu -------------------------------- //
+
+        $("#mobile_toggle_btn").click(function () {
+            var valore = $("#mobile_toggle_btn").val();
+            var unClicked = "unClicked";
+            var clicked = "clicked";
+            if (valore === unClicked) {
+                $("#mobile_toggle_btn").addClass("change");
+                $("#mobile_toggle_btn").val("clicked");
+                $('#main_nav').addClass('navMenu_scrollable');
+
+                $('body').addClass('overflow_hidden');
+                // PER MENU FULL SCREEN
+                //$('#main_nav_mobile_container').fadeIn();
+               // $('#main_nav_mobile_container').css('overflow', 'scroll');
+
+            } else if (valore === clicked) {
+                $("#mobile_toggle_btn").removeClass("change");
+                $('#main_nav').removeClass('navMenu_scrollable');
+                // chiude tutto ciò che è aperto in overlay
+                $('body').removeClass('overflow_hidden');
+
+                // attivo il change sul toggle button
+                $("#mobile_toggle_btn").val("unClicked");
+
+                // PER MENU FULL SCREEN
+                //$('#main_nav_mobile_container').css('overflow', 'hidden');
+                //$('#main_nav_mobile_container').fadeOut();
+            }
+        });
+
+        // ------------------------------- FINE toggle menu ------------------------------ //
+
+       
+
+        // ------------------------------------ Scroll ----------------------------------- //
+
+        $(window).scroll(function () {
+           
+            var scrollTop = $(window).scrollTop();
+            var nav_h = $('#main_nav').height();
+            var windowWhidth = $(window).width();
+
+            // se il menu di navigazione non è trasparente sulla hero image/slider
+            //=> la sezione diventa alta a tutto schermo meno l'altezza della navbar e
+            // la navbar perde la proprietà fixed per quella relative
+
+            if (scrollTop > nav_h && $('#header').hasClass('firstSection_noFixedNav')) {
+
+                $(".navbar-brand").css("width" , "auto");//modifica custom
+                $(".navbar-brand").find("img").css("width" , "146px");//modifica custom
+                $(".navbar-expand-lg").addClass('fixed-top');
+                $(".navbar-brand").find("img").addClass("brand_image_scroll");
+                $(".lang_box").find("img").addClass("brand_image_scroll");
+                $(".navbar-expand-lg").addClass('nav_scroll_down');
+                $(".navbar-expand-lg").addClass('box-shadow');
+
+            }
+            else if (scrollTop < nav_h && $('#header').hasClass('firstSection_noFixedNav')) {
+                $(".navbar-brand").css("width" , "100%");//modifica custom
+                $(".navbar-brand").find("img").css("width" , "180px");//modifica custom
+                $(".navbar-brand").find("img").removeClass("brand_image_scroll");
+                $(".lang_box").find("img").removeClass("brand_image_scroll");
+                $(".navbar-expand-lg").removeClass('nav_scroll_down');
+                $(".navbar-expand-lg").removeClass('fixed-top');
+                $(".navbar-expand-lg").removeClass('box-shadow');
+
+            }
+
+            // se il menu di navigazione  è trasparente sulla hero image/slider
+            //=> la sezione diventa alta a tutto schermo e la navbar
+            // acquista la proprietà fixed al posto di quella relative
+
+            else if (scrollTop > nav_h) {
+                $(".navbar-brand").find("img").attr("src" , "../images/loghi/brand_logo.png");
+                $(".navbar-collapse").find('i').css("color" , "#333");
+                $(".navbar-brand").css("width" , "auto");//modifica custom
+                $(".navbar-brand").find("img").css("width" , "146px");//modifica custom
+                $(".navbar-expand-lg").addClass('nav_scroll_down');
+                $(".navbar-brand").find("img").addClass("brand_image_scroll");
+                $(".lang_box").find("img").addClass("brand_image_scroll");
+                $(".navbar-expand-lg").addClass('box-shadow');
+            }
+            else {
+                $(".navbar-brand").find("img").attr("src" , "../images/loghi/brand_logo_white.png");
+                $(".navbar-collapse").find('i').css("color" , "#fff");
+                $(".navbar-brand").css("width" , "100%");//modifica custom
+                $(".navbar-brand").find("img").css("width" , "180px");//modifica custom
+                $(".navbar-brand").find("img").removeClass("brand_image_scroll");
+                $(".lang_box").find("img").removeClass("brand_image_scroll");
+                $(".navbar-expand-lg").removeClass('nav_scroll_down');
+                $(".navbar-expand-lg").removeClass('box-shadow');
+
+            }
+        });
+
+        // ---------------------------------- FINE Scroll -------------------------------- //
+
+    });
+
+    // ---------------------------------- FINE Ready ---------------------------------- //
+    $('#main_nav').ready(function () {
+        var nav_h = $('#main_nav').height();
+        var firstSection_noFixedNav = ($('.firstSection_noFixedNav').height()) - (nav_h);
+        $('.firstSection_noFixedNav').css('max-height', fullSection_height_first);
+        //alert(nav_h + ' , ' + firstSection_noFixedNav);
+    });
+</script>

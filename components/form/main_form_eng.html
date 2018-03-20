@@ -1,0 +1,67 @@
+<!-- inizio form -->
+<form id="contact-form" method="post" action="contacts.php" role="form">
+
+    <div class="controls fade-in-up fadeInUpBig animated">
+
+        <div class="form-group">
+            <label class="control-label" for="contact-name">Name</label>
+            <div>
+                <input class="form-control" type="text" id="contact-name" name="nome-cognome"
+                       placeholder="Name and Surname" required="required"
+                       data-error="Name and Surname are required!">
+            </div>
+            <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label" for="form_email">Email</label>
+            <div>
+                <input id="form_email" type="email" name="email"
+                       placeholder="Insert email here*" required="required"
+                       data-error="Valid Email is required!" class="form-control">
+            </div>
+            <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label" for="form_tel">Phone</label>
+            <div>
+                <input id="form_tel" type="text" name="telefono"
+                       placeholder="Insert your phone number" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label" for="form_object">Subject</label>
+            <div>
+                <input id="form_object" name="oggetto" class="form-control" type="text"
+                       placeholder="Subject *" required="required"
+                       data-error="You have to type a Subject please!">
+            </div>
+            <div class="help-block with-errors"></div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label" for="form_messaggio">Message</label>
+            <div>
+                                    <textarea id="form_messaggio" name="messaggio" class="form-control"
+                                              placeholder="Your Message *" rows="4" required
+                                              data-error="Send us your message! *"></textarea>
+            </div>
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group">
+            <div class="text-right">
+                <input class="btn btn-outline-primary btn-lg box-shadow text-shadow" style="font-family: 'Helvetica', 'Arial' , san-serif;color:white;"  type="submit"
+                       value="Submit">
+            </div>
+        </div>
+    </div>
+    <div class="messages"></div>
+</form>
+<br><br>
+<!-- fine form -->
+<!-- form -->
+<script src="../components/form/validator.js"></script>
+<script src="../components/form/contacts.js"></script>
