@@ -63,3 +63,15 @@
   background-color:#f8f9fa;
   box-shadow:0 10px 20px #f8f9fa;
 }
+
+[type="checkbox"], [type="radio"] {
+ display: none;
+}
+
+.portfolio_filter .active{
+  color:#b4bb6b;
+}
+.portfolio_filter{
+  border-top: solid 3px #40422a;
+  border-bottom: solid 3px #40422a;
+}
