@@ -119,6 +119,7 @@ section{background:none;}
 .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
+    background-color: #b4bb6b;
 }
 
 /* --- quando non vi è la nav bar fixed ---- */
@@ -418,7 +419,7 @@ light
     /*margin-top: -7rem;*/
 }
 #main_footer{
-    background:none;border:solid 3px #40422b;
+    background:none;border-top:solid 3px #40422b;
 }
 #bottom_footer{
     background-color:#40422b;

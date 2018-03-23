@@ -3,7 +3,7 @@
  *  CONFIGURE EVERYTHING HERE
  */
 
-require 'PHPMailer-master/PHPMailerAutoload.php';
+require 'IT/PHPMailer-master/PHPMailerAutoload.php';
 
 $nome= $_POST["nome-cognome"];
 $email= $_POST["email"];

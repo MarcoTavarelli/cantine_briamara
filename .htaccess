@@ -1,4 +1,4 @@
-RewriteBase /cantine_briamara/
+RewriteBase /cantine_briamara/IT/
 RewriteEngine on
 
 
@@ -10,7 +10,7 @@ RewriteRule blog/pagina/(.*) blog.php?pagina=$1
 RewriteRule blog$ blog.php [L]
 
 RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule cantine_briamara/(.*)$ $1.html [L]
+RewriteRule IT/(.*)$ $1.html [L]
 
-ErrorDocument 404 /cantine_briamara/404.html
-ErrorDocument 403 /cantine_briamara/403.html
+ErrorDocument 404 /cantine_briamara/IT/404.html
+ErrorDocument 403 /cantine_briamara/IT/403.html
