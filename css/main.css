@@ -839,12 +839,18 @@ in questa sezione ci sono i css delle animazioni per l'hover
     bottom:35%;
 }
 
-
-
 .item-img {
     background:none;
     z-index:0;
 }
-
+.item-img img{
+    width:100%;
+}
+@media screen and (max-width:992px){
+    .item-type-move .item-hover{opacity:1;}
+    .item-type-move .item-hover:hover{opacity:0;}
+    .item-type-move .item-info .headline {top: 40%;}
+    .item-type-move .item-info .date{bottom:40%;}
+}
 
 
